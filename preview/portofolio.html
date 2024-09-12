@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Judul Aplikasi/Nama Web</title>
+</head>
+<body>
+<!-- Ketikan Kode HTML Anda Disini! -->
+</body>
+</html>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Navbar</title>
+
+    <style>
+
+        body { margin: 0; font-family: Arial, sans-serif;  }
+
+
+
+        .navbar {
+
+            background-color: #333;
+
+            color: #fff;
+
+            padding: 15px 0;
+
+            position: fixed;
+
+            width: 100%;
+
+            top: 0;
+
+            left: 0;
+
+            z-index: 1000;
+
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+        }
+
+
+
+        .container {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            max-width: 1200px;
+
+            margin: 0 auto;   
+
+padding: 0 20px;
+
+        }
+
+
+
+        .logo a {
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-size: 24px;
+
+            font-weight: bold;
+
+        }
+
+        .menu-toggle {
+
+            display: none;
+
+            cursor: pointer;
+
+            position: relative;
+
+            width: 30px;
+
+            height: 21px;
+
+            z-index: 1001;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: space-between;
+
+        }
+
+
+
+        .menu-toggle .bar {
+
+            background-color: #fff; height: 3px;  width: 100%;   transition: all 0.3s ease;
+
+        }
+
+
+
+        .nav-links {
+
+            list-style: none; display: flex;  margin: 0;  padding: 0;
+
+        }
+
+
+
+        .nav-links li {  margin: 0 15px; }
+
+
+
+        .nav-links a {
+
+            color: #fff;
+
+            text-decoration: none;
+
+            font-size: 18px;
+
+            transition: color 0.3s;
+
+        }
+
+
+
+        .nav-links a:hover { color: #ddd; }
+
+
+
+        /* Responsive styles */
+
+        @media (max-width: 768px) { 
+
+            .menu-toggle {
+
+                display: flex;
+
+            }
+
+
+
+            .nav-links {
+
+                display: none;
+
+                flex-direction: column;
+
+                width: 100%;
+
+                background-color: #333;
+
+                position: absolute;
+
+                top: 60px;
+
+                left: 0;
+
+                z-index: 1000;
+
+                padding: 0;
+
+            }
+
+
+
+            .nav-links.active { display: flex; }
+
+            .nav-links li {  margin: 15px 0;  text-align: center; }
+
+            .nav-links a { font-size: 20px; }
+
+        }
+
+
+
+        /* Hide menu-toggle on larger screens */
+
+        @media (min-width: 769px) {
+
+            .menu-toggle {
+
+                display: none;
+
+            }
+
+        }
+
+
+
+        /* Hero Section */
+
+        .hero {
+
+            display: flex;  height: auto; margin-top: 60px; padding: 10px 20px;
+
+            box-sizing: border-box;
+
+            background-color: green;
+
+        }
+
+
+
+        .hero-col {
+
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            border: 0px solid #ddd;
+
+            border-radius: 10px;
+
+            margin: 10px;
+
+            background-color: #fff;
+
+        }
+
+
+
+        .hero-col.left { flex: 1; }
+
+        .hero-col.right { flex: 1; display: flex; justify-content: center; }
+
+        .hero-col.right img { width: 100%;  height: auto;  border: 1px solid #ddd;  border-radius: 10px; }
+
+        .hero-col.left h1 { margin: 0; font-size: 36px; }
+
+        .hero-col.left p { font-size: 24px; margin: 0;   }
+
+
+
+        @media (max-width: 768px) {
+
+            .hero {  flex-direction: column; padding: 10px 20px; }
+
+            .hero-col { margin: 0; padding: 20px; }
+
+            .hero-col.left { text-align: center; } 
+
+         .hero-col.right { margin-top: 20px; padding: 0; }
+
+        }
+        
+        table {
+
+            width: 50%;
+
+            border-collapse: collapse;
+
+            margin: 25px 0;
+
+            font-size: 18px;
+
+            text-align: left;
+
+        }
+
+        th, td {
+
+            padding: 12px;
+
+            border: 1px solid #dddddd;
+
+        }
+
+        th {
+
+            background-color: #f2f2f2;
+
+        }
+        img {
+
+            width: 300px;
+
+            height: auto;
+
+            border: 2px solid #ddd;
+
+            border-radius: 10px;
+
+            padding: 5px;
+
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        img:hover {
+
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+
+        }
+
+ /* About Section */
+
+        .about { padding: 60px 20px; background-color: #f4f4f4;  text-align: center; }
+
+        .about h2 { font-size: 36px; margin-bottom: 20px; }
+
+        .about p { font-size: 18px; line-height: 1.6; margin: 0 auto; max-width: 800px; }
+
+
+
+    </style>
+
+</head>
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="container">
+
+            <div class="logo">
+
+                <a href="#">WS Site</a>
+
+            </div>
+
+            <div class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+
+                <span class="bar"></span>
+
+                <span class="bar"></span>
+
+                <span class="bar"></span>
+
+            </div>
+
+            <ul class="nav-links" id="nav-links">
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#about">About</a></li>
+
+                <li><a href="#skills">Skills</a></li>
+
+                <li><a href="#portfolio">Portfolio</a></l>
+
+                <li><a href="#contact">Contact</a></li>
+
+                 <li><a href="login.html">Login</a></i>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+    
+
+    <!-- Hero Section -->
+
+    <section class="hero">
+
+        <div class="hero-col left">
+
+            <div>
+
+                <h1>Welcome to</h1>
+
+                <p>WS Website</p>
+
+            </div>
+
+        </div>
+
+        <div class="hero-col right">
+
+            <img src="https://via.placeholder.com/600x400" alt="Illustration">
+
+        </div>
+
+    </section>
+
+
+
+<!-- About Section -->
+
+<section class="about" id="about">
+
+    <h2>Tentang Saya</h2>
+
+    <p>
+
+        Halo, saya Muhammad Wildan Sangdhirga, seorang profesional di bidang pengembangan web yang menawarkan layanan pembuatan dan pengembangan situs web untuk berbagai kebutuhan. Dengan spesialisasi dalam HTML, CSS, dan JavaScript, serta pengalaman dalam desain UX/UI.
+
+    </p>
+
+</section>
+
+<section class="about" id="skills">
+
+    <h2>skills</h2>
+  <table>
+
+        <tr>
+
+            <th>Ms Word</th>
+
+            <th>90%</th>
+
+
+        </tr>
+        <tr>
+
+            <th>Ms Excel</th>
+
+            <th>85%</th>
+
+        </tr>
+        <tr>
+
+            <th>HTML</th>
+
+            <th>83%</th>
+
+        </tr>
+        <tr>
+
+            <th>CSS</th>
+
+            <th>79%</th>
+
+        </tr>
+        <tr>
+
+            <th>Javascript</th>
+
+            <th>69%</th>
+
+        </tr>
+    </table>
+  
+  <section class="about" id="Portfolio">
+
+    <h2>Portpolio</h2>
+
+   <img src="SAVE_20240908_102527.jpg" alt="gambar portpolio" />
+
+</section>
+  
+  <section class="about" id="about">
+
+    <h2>Tentang Saya</h2>
+
+    <p>
+
+        Jika anda ingin menghubungi saya, anda bisa menghubungi saya melalui:
+
+    </p>
+
+  <table>
+    <tr>
+
+            <th>Whatsapp</th>
+
+            <th>085775132796</th>
+
+        </tr>
+    <tr>
+
+            <th>Email</th>
+
+            <th>tntmangg@gmail.com</th>
+
+        </tr>
+    <tr>
+
+            <th>Instagram</th>
+
+            <th>@tntman99</th>
+
+        </tr>
+</table>
+</section>
+</section>
+
+<script>       
+
+document.addEventListener('DOMContentLoaded', function() {
+
+            const menuToggle = document.getElementById('menu-toggle');
+
+            const navLinks = document.getElementById('nav-links');
+
+            menuToggle.addEventListener('click', function() {
+
+                  navLinks.classList.toggle('active');
+
+            });
+
+            
+
+            // Menambahkan event listener untuk setiap link dalam menu
+
+            navLinks.querySelectorAll('a').forEach(link => {
+
+                link.addEventListener('click', function() {
+
+                navLinks.classList.remove('active'); // Menutup menu setelah item diklik
+
+                });
+
+            });
+
+        });
+function validateLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Contoh validasi sederhana
+            if (username === "admin" && password === "1234") {
+                alert("Login berhasil!");
+                // Anda bisa mengganti ini dengan pengalihan halaman menggunakan window.location.href
+            } else {
+                var errorMessage = document.getElementById("errorMessage");
+                errorMessage.style.display = "block";  // Tampilkan pesan error
+            }
+        }
+
+ </script>
+
+</body>
+
+</html>
